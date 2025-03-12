@@ -31,7 +31,7 @@ class DatabaseConnector:
         else:
             print(f"No data to upload to {table}... \n")
 
-    def query_update(self, sql_string:str, provider:str, database:str, schema:str):
+    def query_update(self, sql_string:str):
         """
         provider = ['snowflake', 'mysql']
         """
