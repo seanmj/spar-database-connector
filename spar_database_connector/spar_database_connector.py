@@ -1,6 +1,6 @@
 import pandas as pd
 import sqlalchemy as sa
-from query_engine.query_engine import query_engine
+from .query_engine.query_engine import query_engine
 
 class DatabaseConnector:
     def __init__(self, provider:str, database:str, schema:str):
