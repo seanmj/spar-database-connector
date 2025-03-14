@@ -24,26 +24,32 @@ Variables only needed if connecting to said providers.
 
 #### Querying a table...
 
-`` from spar_database_connector.spar_database_connector import DatabaseConnector``
+``` 
+from spar_database_connector.spar_database_connector import DatabaseConnector
 
-``OmniConnector = DatabaseConnector('mysql','omni_database','omni_production')``
+OmniConnector = DatabaseConnector('mysql','omni_database','omni_production')
 
-``response_df = OmniConnector.query_select('SELECT * FROM assets LIMIT 10;')``
+response_df = OmniConnector.query_select('SELECT * FROM assets LIMIT 10;') 
+```
 
 #### Appending/Loading dataframe to a table...
 
-``AnalyticsConnector = DatabaseConnector('mysql','analytics_database','spar_analytics')``
+```
+AnalyticsConnector = DatabaseConnector('mysql','analytics_database','spar_analytics')
 
-``test_df = pd.DataFrame({'a':[1,2,3],'b':[4,5,6]})``
+test_df = pd.DataFrame({'a':[1,2,3],'b':[4,5,6]})
 
-``AnalyticsConnector.query_upload(test_df,'test_table','replace')``
+AnalyticsConnector.query_upload(test_df,'test_table','replace')
+```
 
 #### Updates/Insert/etc. queries...
 
-``update_query = "UPDATE test_table SET 'b' = 9 WHERE 'a' = 3;"``
+```
+update_query = "UPDATE test_table SET 'b' = 9 WHERE 'a' = 3;"
 
-``insert_query = "INSERT INTO test_table ('a','b') VALUES (7,8);"``
+insert_query = "INSERT INTO test_table ('a','b') VALUES (7,8);"
 
-``AnalyticsConnector.query_update(update_query)``
+AnalyticsConnector.query_update(update_query)
 
-``AnalyticsConnector.query_udpate(insert_query)``
+AnalyticsConnector.query_update(insert_query)
+```
