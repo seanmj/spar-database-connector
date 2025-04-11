@@ -8,7 +8,7 @@ def check_required_envs(provider:str):
         reqd_envs = [
             'SNOWFLAKE_HOST',
             'SNOWFLAKE_USER',
-            'SNOWFLAKE_PASSWORD'
+            'SNOWFLAKE_PASSWORD',
             'SNOWFLAKE_ACCOUNT',
             'SNOWFLAKE_WAREHOUSE',
             'SNOWFLAKE_ROLE'
